@@ -6,10 +6,14 @@ import 'package:paper_elements/paper_button.dart' as paper_button;
 class MyMenu extends PolymerElement {
 
   @published String msg;
+
   MyMenu.created() : super.created();
 
   @override
   void attached() {
   }
 
+  void onButtonTapped(var e) {
+    html.window.alert("Hello! My message is $msg");
+  }
 }
