@@ -1,0 +1,35 @@
+
+<link rel="import" href="packages/polymer/polymer.html" />
+
+<link rel="import" href="packages/paper_elements/paper_button.html" />
+
+<polymer-element name="my-menu" attributes="msg">
+    <template>
+        <style>
+            :host {
+                background-color: #B2DFDB;
+            }
+            .main {
+                margin: 0px;
+                padding: 10px;
+                border: solid 1px #000000;
+            }
+
+            paper-button {
+                width: 200px;
+                background-color:  #2196F3;
+            }
+        </style>
+        <div class="main">
+
+            <div class="information" horizontal around-justified layout>
+            <span>{{msg}}</span>
+            <paper-button on-tap="{{onButtonTapped}}">
+                <core-icon icon="open-in-browser" self-start></core-icon>
+                <div flex self-center horizontal center-justified layout>Button</div>
+            </paper-button>
+                </div>
+        </div>
+    </template>
+    <script type="application/dart" src="my_menu.dart"></script>
+</polymer-element>

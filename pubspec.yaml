@@ -1,0 +1,16 @@
+name: polymer_dart_test
+version: 0.0.1
+description: Test project for polymer.dart
+dependencies:
+  browser: any
+  core_elements: any
+  paper_elements: any
+  polymer: any
+dev_dependencies:
+  unittest: any
+transformers:
+- polymer:
+    entry_points:
+    - web/index.html
+- $dart2js:
+    $include: web/index.html_bootstrap.dart
